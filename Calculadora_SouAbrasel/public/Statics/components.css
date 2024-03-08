@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+
+:root {
+    --verde: #01713d;
+    --verde-claro: rgb(34 197 94);
+    --vermelho: #FF0000;
+    --cinza: #b2b2b2;
+    --cinza-claro2: #dfdddd;
+    --cinza-claro-trans: rgba(223, 221, 221, 0.95);
+    --cinza-claro: #f4f4f4;
+    --cinza-escuro: #666666;
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --amarelo: #CC0;
+    --mostarda: #f7931d;
+}
+/* HEADER */
+.header-calc {
+    background-color: #0e5311;
+    margin-top: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header-calc-dark{
+    /* background-color: black; */
+    background-color: var(--verde-claro);
+    /* border-bottom: 1px solid var(--verde-claro);
+    color: var(--verde-claro); */
+}
+
+
+.logo-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-header-dark {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displaynone {
+    display: none;
+  }
+
+.logo-header img {
+    height: 120px;
+    width: auto;
+    padding: 20px;
+}
+.logo-header-dark img {
+    height: 120px;
+    width: auto;
+    padding: 20px;
+}
+
+
+/* 
+footer {
+    background-color: black;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.logo-footer img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.social-icons a i {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.social-icons a i:hover {
+    color: #ccc;
+    transition: all 200ms ease-in-out;
+} */
+
+/* BOTOES */
+button {
+    background-color: #136c18;
+    /* default button color */
+    color: #fff;
+    /* default text color */
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    /* transition effect for background-color */
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+}
+
+button:hover {
+    background-color: #1b8a20;
+    /* hover button color */
+}
+
+.button-dark{
+    background-color: var(--verde-claro);
+}
+.button-dark:hover{
+    background-color: rgb(71, 208, 121);
+}
+
+
+#calcular {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+ }
+ .calcular-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+#detalhar-btn {
+    height: 40px;
+
+}
+
+#fechar-modal:hover {
+    background-color: rgb(168, 162, 162);
+    transition: 200ms all ease;
+}
+
+@media (max-width: 600px) {
+
+
+}
+
+@media (max-width: 400px) {
+    .header-calc{
+        font-size: 11px;
+    }
+    #detalhar-btn {
+        height: auto;
+        font-size: 14px;
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    .social-icons a i {
+        font-size: 14px;
+    }
+
+    .logo-footer img {
+        width: 120px;
+        cursor: pointer;
+    }
+    .logo-header img {
+        height: 130px;
+        width: auto;
+        padding: 30px;
+    }
+   
+   
+}
+
+@media (min-width: 800px){
+    .toggle-label {
+        pointer-events: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .toggle-label .toggle-wrapper {
+        min-width: 47px;
+        min-height: 24px;
+      }
+      .toggle-label .toggle-wrapper .selector {
+        min-width: 21px;
+        min-height: 21px;
+        position: absolute;
+        top: 50%;
+        left: 23px;
+    }
+    .toggle-label .input:checked + .toggle-wrapper > .selector {
+        left: calc(100% - 44px);
+        background-color: var(--verde-claro);
+      }
+}
+@media (max-width: 800px){
+    #modal {
+        width: 90%;
+    }
+    .toggle-label .toggle-wrapper .selector {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+    }
+    .toggle-label .input:checked + .toggle-wrapper > .selector {
+        left: calc(100% - 32px);
+        background-color: var(--verde-claro);
+      }
+}
+
+
+/* BOTAO DE SWITCH */
+.toggle-label {
+    pointer-events: none;
+  }
+  .toggle-label .input {
+    display: none;
+  }
+  
+
+ 
+  .toggle-label .toggle-wrapper {
+    position: relative;
+    width: 35px;
+    height: 18px;
+    background: radial-gradient(closest-side, rgb(249, 249, 249), rgb(233, 228, 228));
+    border-radius: 999px;
+    margin: auto;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  .toggle-label .input:checked + .toggle-wrapper {
+    background: radial-gradient(closest-side, rgb(0, 0, 0), rgb(39, 38, 38));
+    /* background: radial-gradient(closest-side, rgb(0, 0, 0), rgb(39, 38, 38)); */
+    border: 1px solid black;
+}
+
+  .toggle-label .toggle-wrapper .selector {
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+    background-color: var(--verde);
+    transition: all 0.55s ease;
+    border-radius: 50%;
+  }
+  .toggle-label .notification {
+    font-size: 20px;
+    width: 100%;
+  }
+  .toggle-label .notification .selected:before {
+    content: "No";
+    font-size: 20px;
+    border-bottom: 2px solid;
+  }
